@@ -204,7 +204,7 @@ Next we create the dataset that will actually be the root filesystem and give it
     
 Since we want to boot off this filesystem, we can set an attribute on the pool to indicate which dataset should be used as the root:
 
-    $ zpool set bootfs rpool/ROOT rpool
+    $ zpool set bootfs=rpool/ROOT rpool
     
 Note that this will only work for a RAID-1 or completely unmirrored pool.  If you're using RAID-Z, you'll currently need to set the root dataset using the root=... kernel parameter (see Configuring GRUB below).
 
